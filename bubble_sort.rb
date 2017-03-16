@@ -8,10 +8,7 @@ class BubbleSort
                     break
                 end
                 if list[index] > list[index + 1]
-                    swap_1 = list[index]
-                    swap_2 = list[index + 1]
-                    list[index] = swap_2
-                    list[index + 1] = swap_1
+                    list[index], list[index + 1] = swap(list[index], list[index + 1])
                     counter += 1
                 end
             end
@@ -21,6 +18,11 @@ class BubbleSort
         end
         puts list
     end
+
+    def swap(value_1, value_2)
+        return value_2, value_1
+    end
+
 end
 
 sorter = BubbleSort.new
