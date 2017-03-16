@@ -3,12 +3,12 @@ class BubbleSort
         ordered = false
         until ordered
             counter = 0
-            list.each_index do |index|
-                if list[index] == list[-1]
+            list.each_index do |i|
+                if list[i] == list[-1]
                     break
                 end
-                if list[index] > list[index + 1]
-                    list[index], list[index + 1] = swap(list[index], list[index + 1])
+                if list[i] > list[i + 1]
+                    list[i], list[i + 1] = swap(list[i], list[i + 1])
                     counter += 1
                 end
             end
@@ -27,5 +27,4 @@ end
 
 sorter = BubbleSort.new
 sorter.sort(["d", "b", "a", "c"])
-
 
